@@ -160,11 +160,11 @@ def main():
         message = input()
         steg = LSBSteg(cv2.imread("../files/pryanik.png"))
         img_encoded = steg.encode_text(message)
-        cv2.imwrite("../files/encoded2.png", img_encoded)
+        cv2.imwrite("../files/encoded1.png", img_encoded)
         print('Encode success!')
 
     elif mode == 2:
-        steg = LSBSteg(cv2.imread("../files/encoded2.png"))
+        steg = LSBSteg(cv2.imread("../files/encode1.png"))
         raw = steg.decode_text()
         print('Decoded text is >>> ' + raw)
     else:
